@@ -17,6 +17,7 @@ public class MediaAnio {
         booksDos = new Book(autor,"Harry Potter y el cáliz de fuego",320);
         books.add(booksDos);
 
+
         autor = new Person("Carlos","Ruiz Zafon",1964);
         booksDos = new Book(autor,"El principe de la niebla",208);
         books.add(booksDos);
@@ -35,6 +36,7 @@ public class MediaAnio {
                 .map(Book::getName)
                 .filter(name -> name.contains("Potter"))
                 .forEach(System.out::println);
+
 
         System.out.println("Average of the authors' birth years: " + average);
     }

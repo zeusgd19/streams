@@ -3,7 +3,7 @@ package Flujos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class sumaPositivos {
+public class sumaPositivosONegativos {
     public static void main(String[] args) {
         List<Integer> numeros = new ArrayList<>();
 
@@ -21,7 +21,8 @@ public class sumaPositivos {
 
         long cuantosPostivos = numeros.stream().filter(numero -> numero >= 0).count();
         long cuantosNegativos = numeros.stream().filter(numero -> numero < 0).count();
+        int suma = numeros.stream().mapToInt(Integer::valueOf).sum();
 
-        System.out.printf("Hay %d numeros poistivos y %d numero negativos",cuantosPostivos,cuantosNegativos);
+        System.out.printf("Hay %d numeros poistivos y %d numero negativos, y la suma de todos es %d",cuantosPostivos,cuantosNegativos,suma);
     }
 }

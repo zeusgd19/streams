@@ -1,0 +1,43 @@
+package Comparable;
+
+import java.util.*;
+
+public class NiniosBuenos {
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int ninio;
+    int prioridad;
+    int peso;
+    ninio = sc.nextInt();
+    List<Ninios> lista = new ArrayList<>();
+
+        while(ninio != -1){
+        if(ninio != 0) {
+            prioridad = sc.nextInt();
+            peso = sc.nextInt();
+            lista.add(new Ninios(prioridad, peso));
+            ninio--;
+        } else {
+            System.out.println(ordenar(lista));
+            System.out.println("---");
+            ninio = sc.nextInt();
+            if(ninio == 0){
+                break;
+            }
+            lista = new ArrayList<Ninios>();
+        }
+    }
+}
+
+    public static String ordenar(List<Ninios> lista){
+        StringBuilder resultado = new StringBuilder();
+
+        Comparator<Ninios> comparator = (p, q) -> q.getPrioridad() - p.getPrioridad();
+        Comparator<Ninios> comparator2 = comparator.thenComparing(Ninios::getPeso);
+        Collections.sort(lista,comparator2);
+        for (Ninios ninios : lista){
+            resultado.append(ninios).append("\n");
+        }
+        return resultado.toString();
+    }
+}

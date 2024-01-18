@@ -32,6 +32,9 @@ public class Justicia implements Comparable<Justicia>{
 
     @Override
     public int compareTo(Justicia otro) {
+        if(otro.getDinero() - this.dinero == 0) {
+            return otro.getPremio() - this.premio;
+        }
         return otro.getDinero() - this.dinero;
     }
 }

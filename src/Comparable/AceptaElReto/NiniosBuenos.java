@@ -1,4 +1,4 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 import java.util.*;
 
@@ -6,16 +6,16 @@ public class NiniosBuenos {
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     int ninio;
-    int prioridad;
-    int peso;
+    byte prioridad;
+    short peso;
     ninio = sc.nextInt();
     List<Ninios> lista = new ArrayList<>();
 
         while(ninio != -1){
         if(ninio != 0) {
-            prioridad = sc.nextInt();
-            peso = sc.nextInt();
-            lista.add(new Ninios(prioridad, peso));
+            lista.add(new Ninios(prioridad = sc.nextByte()
+                    , peso = sc.nextShort())
+            );
             ninio--;
         } else {
             System.out.println(ordenar(lista));
@@ -24,7 +24,7 @@ public class NiniosBuenos {
             if(ninio == 0){
                 break;
             }
-            lista = new ArrayList<Ninios>();
+            lista = new ArrayList<>();
         }
     }
 }

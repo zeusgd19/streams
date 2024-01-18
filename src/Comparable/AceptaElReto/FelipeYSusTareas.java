@@ -1,30 +1,30 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 import java.util.*;
 
 public class FelipeYSusTareas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int casoPrueba;
-        int prioridad;
-        int duracion;
-        casoPrueba = sc.nextInt();
+        byte casoPrueba;
+        short prioridad;
+        short duracion;
+        casoPrueba = sc.nextByte();
         List<Felipe> lista = new ArrayList<>();
 
         while(casoPrueba != -1){
             if(casoPrueba != 0) {
-                prioridad = sc.nextInt();
-                duracion = sc.nextInt();
-                lista.add(new Felipe(prioridad,duracion));
+                lista.add(new Felipe(prioridad = sc.nextShort()
+                        ,duracion = sc.nextShort())
+                );
                 casoPrueba--;
             } else {
                 System.out.println(ordenar(lista));
                 System.out.println("---");
-                casoPrueba = sc.nextInt();
+                casoPrueba = sc.nextByte();
                 if(casoPrueba == 0){
                     break;
                 }
-                lista = new ArrayList<Felipe>();
+                lista = new ArrayList<>();
             }
         }
     }

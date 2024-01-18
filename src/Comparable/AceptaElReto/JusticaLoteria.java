@@ -1,4 +1,4 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 import java.util.*;
 
@@ -13,9 +13,9 @@ public class JusticaLoteria {
 
         while(localidades != -1){
             if(localidades != 0) {
-                dinero = sc.nextInt();
-                premios = sc.nextInt();
-                lista.add(new Justicia(dinero,premios));
+                lista.add(new Justicia(dinero = sc.nextInt()
+                        ,premios = sc.nextInt())
+                );
                 localidades--;
             } else {
                 System.out.println(comprobar(lista));
@@ -23,7 +23,7 @@ public class JusticaLoteria {
                 if(localidades == 0){
                     break;
                 }
-                lista = new ArrayList<Justicia>();
+                lista = new ArrayList<>();
             }
         }
     }

@@ -1,28 +1,28 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 public class Felipe{
-    private int prioridad;
-    private int duracion;
+    private short prioridad;
+    private short duracion;
 
-    public Felipe(int prioridad, int duracion) {
+    public Felipe(short prioridad, short duracion) {
         this.duracion = duracion;
         this.prioridad = prioridad;
     }
 
 
-    public int getPrioridad() {
+    public short getPrioridad() {
         return prioridad;
     }
 
-    public void setPrioridad(int prioridad) {
+    public void setPrioridad(short prioridad) {
         this.prioridad = prioridad;
     }
 
-    public int getDuracion() {
+    public short getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
+    public void setDuracion(short duracion) {
         this.duracion = duracion;
     }
     @Override

@@ -1,4 +1,4 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 public class Justicia implements Comparable<Justicia>{
     private int dinero;

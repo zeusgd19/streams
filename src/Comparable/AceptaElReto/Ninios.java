@@ -1,28 +1,28 @@
-package Comparable;
+package Comparable.AceptaElReto;
 
 public class Ninios {
-    private int prioridad;
-    private int peso;
+    private byte prioridad;
+    private short peso;
 
-    public Ninios(int prioridad, int peso) {
+    public Ninios(byte prioridad, short peso) {
         this.peso = peso;
         this.prioridad = prioridad;
     }
 
 
-    public int getPrioridad() {
+    public byte getPrioridad() {
         return prioridad;
     }
 
-    public void setPrioridad(int prioridad) {
+    public void setPrioridad(byte prioridad) {
         this.prioridad = prioridad;
     }
 
-    public int getPeso() {
+    public short getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(short peso) {
         this.peso = peso;
     }
     @Override

@@ -29,21 +29,15 @@ public class JusticaLoteria {
     }
 
     public static String comprobar(List<Justicia> lista){
-        String resultado = "";
             Collections.sort(lista);
 
         for (int i = 0; i < lista.size() - 1; i++) {
-            for(int j = i + 1; j < lista.size(); j ++) {
-                if (lista.get(i).getDinero() > lista.get(j).getDinero()) {
-                    if (lista.get(i).getPremio() <= lista.get(j).getPremio()) {
-                        resultado = "NO";
-                        break;
-                    } else {
-                        resultado = "SI";
-                    }
+            if(lista.get(i).getDinero() > lista.get(i + 1).getDinero()) {
+                if (lista.get(i).getPremio() <= lista.get(i + 1).getPremio()) {
+                    return "NO";
                 }
             }
         }
-            return resultado;
+            return "SI";
         }
 }

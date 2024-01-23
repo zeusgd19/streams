@@ -6,15 +6,13 @@ public class JusticaLoteria {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int localidades;
-        int dinero;
-        int premios;
         localidades = sc.nextInt();
         List<Justicia> lista = new ArrayList<>();
 
         while(localidades != -1){
             if(localidades != 0) {
-                lista.add(new Justicia(dinero = sc.nextInt()
-                        ,premios = sc.nextInt())
+                lista.add(new Justicia(sc.nextInt()
+                        , sc.nextInt())
                 );
                 localidades--;
             } else {

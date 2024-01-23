@@ -6,15 +6,13 @@ public class FelipeYSusTareas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         byte casoPrueba;
-        short prioridad;
-        short duracion;
         casoPrueba = sc.nextByte();
         List<Felipe> lista = new ArrayList<>();
 
         while(casoPrueba != -1){
             if(casoPrueba != 0) {
-                lista.add(new Felipe(prioridad = sc.nextShort()
-                        ,duracion = sc.nextShort())
+                lista.add(new Felipe(sc.nextShort()
+                        ,sc.nextShort())
                 );
                 casoPrueba--;
             } else {

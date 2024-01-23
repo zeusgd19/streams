@@ -8,17 +8,14 @@ public class Tutankamon {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         byte objetos;
-        String objeto;
-        short valor;
-        short peso;
         objetos = sc.nextByte();
         List<ObjetosTutankamon> lista = new ArrayList<>();
 
         while(objetos != -1){
             if(objetos != 0) {
-                lista.add(new ObjetosTutankamon(objeto = sc.next()
-                        ,valor = sc.nextShort()
-                        ,peso = sc.nextShort())
+                lista.add(new ObjetosTutankamon(sc.next()
+                        ,sc.nextShort()
+                        ,sc.nextShort())
                 );
                 objetos--;
             } else {

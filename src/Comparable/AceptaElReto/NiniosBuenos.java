@@ -6,15 +6,13 @@ public class NiniosBuenos {
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     int ninio;
-    byte prioridad;
-    short peso;
     ninio = sc.nextInt();
     List<Ninios> lista = new ArrayList<>();
 
         while(ninio != -1){
         if(ninio != 0) {
-            lista.add(new Ninios(prioridad = sc.nextByte()
-                    , peso = sc.nextShort())
+            lista.add(new Ninios(sc.nextByte()
+                    ,sc.nextShort())
             );
             ninio--;
         } else {
